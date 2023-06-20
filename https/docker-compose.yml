@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  SoundUNder_wa:
+    container_name: x509-rp
+    image: x509-rp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
+    ports:
+      - "443:443"
